@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Force pointer cursor on all links -->
+  <style>
+    a {
+      cursor: pointer !important;
+    }
+    
+    /* ===========================
+       Button Style
+       =========================== */
+    .check-eligibility-button {
+      /* Basic layout */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;               /* Fill container width (optional) */
+      padding: 10px;       /* Adjust for desired size */
+      font-weight: bold;
+      font-size: 1rem;
+      
+      /* Colors and border */
+      background-color: #AAF700; /* Bright/lime green */
+      color: #000;               /* Black text */
+      border: 2px solid #000;    /* Black border */
+      border-radius: 9999px;     /* Fully rounded (pill shape) */
+      
+      /* Shadow & transition */
+      box-shadow: 0 6px 0 #000;  /* Black offset shadow */
+      transition: all 0.2s ease-in-out;
+    }
+    .check-eligibility-button span {
+      margin-left: 0.5rem;
+    }
+    .check-eligibility-button:hover {
+      transform: translateY(-2px);   /* Lift up on hover */
+      box-shadow: 0 8px 0 #000;      /* Slightly larger shadow */
+    }
+    .check-eligibility-button:active {
+      transform: translateY(0);      /* Return down on click */
+      box-shadow: 0 6px 0 #000;
+    }
+    .check-eligibility-button:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+  </style>
+  
+  <title>Grass: Earn a Stake in Ai</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <script charset="UTF-8" type="text/javascript" src="./755d37b2-8796-4595-94cd-a98d0945deb4.js"></script>
+</head>
+<body class="__className_baeecc antialiased bg-[#FAFAFA] min-h-screen h-full">
+
+  <div class="grid h-full grid-cols-[1fr] md:grid-cols-[5fr_7fr] lg:grid-cols-[35fr_65fr]">
+    <div>
+      <div class="grid gap-x-0 grid-rows-[auto_1fr] h-full overflow-hidden p-0 w-full items-start
+                  md:gap-x-8 md:h-full md:p-8 md:items-center md:w-full md:max-w-[30em]">
+        <div class="flex items-center justify-between gap-8 py-5 pl-4 pr-7 border-b border-black md:border-none md:p-0 ">
+          <a class="h-full" href="/">
+            <div class="flex flex-row items-start gap-1 relative w-[100px]">
+              <img alt="Logo" loading="lazy" width="100" height="100" decoding="async"
+                   style="color:transparent"
+                   srcset="grass-horizontal-logo.webp"
+                   src="grass-horizontal-logo.webp">
+              <p class="-mt-1">™</p>
+            </div>
+          </a>
+          <div class="flex flex-row gap-7">
+            <a class="transition-all ease-out text-sm font-[500]" href="https://getgrass.in">ABOUT US</a>
+            <a class="transition-all ease-out text-sm font-[500]" href="https://grass-foundation.gitbook.io/grass-docs/introduction/faq">FAQ</a>
+          </div>
+        </div>
+
+        <div class="w-full flex justify-between flex-col gap-[0.5rem] h-full px-5 md:px-0 max-h-[82vh] transition-[0.3s] overflow-auto">
+          <div>
+            <div class="flex flex-col items-start w-full h-full pt-20 pr-2">
+              <span class="text-nowrap align-middle text-xs rounded-[7px] font-bold bg-secondary w-fit ps-2 pe-2 mb-20 bg-[#F3FFD1]">
+                <h2 class="text-3xl font-bold">Sign In.</h2>
+              </span>
+              <form class="flex flex-col gap-4 mb-12 w-full">
+                <div class="flex items-center justify-between gap-1">
+                  <p class="text-md font-[700]">Don't have an account?</p>
+                  <span class="text-nowrap align-middle rounded-[7px] font-bold bg-primary w-fit ps-2 pe-2 outline-offset-[2px] outline-[2px] outline-transparent bg-[#AAF700]">
+                    <a class="font-[700] text-md underline" href="">Register</a>
+                  </span>
+                </div>
+
+                <div class="space-y-2">
+                  <div class="relative" id="form-item" aria-describedby="form-item-description" aria-invalid="false">
+                    <div class="absolute left-[0.625rem] w-[2.5rem] h-[2.5rem] text-[1rem] flex items-center justify-center z-[2] top-[50%] -translate-y-[50%]">
+                      <svg viewBox="0 0 24 25" fill="none" focusable="false" class="w-6 h-6">
+                        <path
+                          d="M12 12.8a5 5 0 100-10 5 5 0 000 10zM20.59 22.8c0-3.87-3.85-7-8.59-7s-8.59 3.13-8.59 7"
+                          stroke="currentColor"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round">
+                        </path>
+                      </svg>
+                    </div>
+                    <input
+                      id="invitationCode"
+                      class="bg-[#F3F3F3] w-full h-[3rem] text-md pl-[3rem] pr-[1rem]
+                             rounded-[15px] min-w-0 outline-[2px] outline-transparent
+                             relative appearance-none color-black border border-black
+                             focus:border-black focus:outline"
+                      placeholder="Enter the invitation code">
+                  </div>
+                </div>
+
+                <!-- Modified button with custom class for styling -->
+                <button
+                  id="submitButton"
+                  class="check-eligibility-button"
+                  disabled
+                >
+                  Check Eligibility
+                  <span>→</span>
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-center w-full mt-8 bg-none flex-col">
+            <div class="grid grid-cols-2 gap-2 mb-2">
+              <div class="text-center flex justify-center">
+                <a class="underline rounded-sm w-fit px-1 text-sm transition-all hover:bg-[#AAF700] hover:text-black duration-300" href="https://www.getgrass.io/privacy-policy">Privacy Policy</a>
+              </div>
+              <div class="text-center flex justify-center">
+                <a class="underline rounded-sm w-fit px-1 text-sm transition-all hover:bg-[#AAF700] hover:text-black duration-300" href="https://www.getgrass.io/terms-and-conditions">Terms &amp; Conditions</a>
+              </div>
+              <div class="text-center flex justify-center">
+                <a class="underline rounded-sm w-fit px-1 text-sm transition-all hover:bg-[#AAF700] hover:text-black duration-300" href="https://www.getgrass.io/cookie-policy">Cookie Policy</a>
+              </div>
+              <div class="text-center flex justify-center">
+                <a class="underline rounded-sm w-fit px-1 text-sm transition-all hover:bg-[#AAF700] hover:text-black duration-300" href="https://www.getgrass.io/privacy-policy">Cookie Settings</a>
+              </div>
+            </div>
+            <div class="flex items-center py-2 font-sans">
+              <p class="text-center text-sm">© Grass Foundation, 2025. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side image area -->
+    <div class="h-screen hidden md:block relative">
+      <div class="relative h-screen overflow-hidden flex-shrink-0 flex items-center justify-center">
+        <img
+          alt="Bg"
+          loading="lazy"
+          decoding="async"
+          data-nimg="fill"
+          class="absolute object-cover bg-no-repeat"
+          style="position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent"
+          sizes="100vw"
+          srcset="image.webp"
+          src="image.webp"
+        >
+      </div>
+    </div>
+  </div>
+  
+  <!-- Hidden test button for class "interact-button" -->
+  <button class="interact-button" style="display:none;">Interact</button>
+
+  <!-- JavaScript: Invitation Code + "Validating..." logic -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const inputField = document.getElementById("invitationCode");
+      const submitButton = document.getElementById("submitButton");
+      // Define the specific valid code
+      const validCode = "MNTWPEODHK"; // Replace with your desired code
+
+      // Initially disable the button
+      submitButton.disabled = true;
+
+      // Enable the button only when the input value exactly matches the valid code
+      inputField.addEventListener("input", function () {
+        if (inputField.value.trim() === validCode) {
+          submitButton.disabled = false;
+        } else {
+          submitButton.disabled = true;
+        }
+      });
+
+      // Listen for the button click
+      submitButton.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        // Check if the input is valid
+        if (inputField.value.trim() === validCode) {
+          // Save the original button content so it can be restored later
+          const originalContent = submitButton.innerHTML;
+          // Change the button text to "Validating..." and disable the button
+          submitButton.innerHTML = `Validating...`;
+          submitButton.disabled = true;
+
+          // After 2 seconds, revert the button and trigger interaction
+          setTimeout(function(){
+            // Restore original button content
+            submitButton.innerHTML = originalContent;
+
+            // Find the element with class "interact-button"
+            const interactElement = document.querySelector('.interact-button');
+            if (interactElement) {
+              // Add an "active" class and simulate a click
+              interactElement.classList.add("active");
+              interactElement.click();
+              console.log("Interact-button found and clicked.");
+            } else {
+              console.log("No element with class 'interact-button' found.");
+            }
+          }, 2000);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
